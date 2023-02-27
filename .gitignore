@@ -1,1 +1,5 @@
-.DS_Store
+node_modules
+elm-stuff
+elm-land*.tgz
+src/codegen/generated
+tests/tmp

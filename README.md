@@ -1,31 +1,53 @@
 # Elm Land
 
-[![Npm package version](https://badgen.net/npm/v/elm-land)](https://npmjs.com/package/elm-land) [![elm-land](https://github.com/elm-land/elm-land/actions/workflows/node.js.yml/badge.svg?)](https://github.com/elm-land/elm-land/actions/workflows/node.js.yml) [![BSD-3 Clause](https://img.shields.io/github/license/elm-land/elm-land)](https://github.com/elm-land/elm-land/blob/main/LICENSE)
-
-[![Discord](https://badgen.net/discord/members/vnmYFfySbH?icon=discord&label)](https://join.elm.land) [![Twitter](https://badgen.net/badge/icon/twitter?icon=twitter&label&color=00acee)](https://twitter.com/elmland_) [![GitHub](https://badgen.net/badge/icon/github?icon=github&label&color=4078c0)](https://www.github.com/elm-land/elm-land) 
+[![Discord](https://badgen.net/badge/icon/discord?icon=discord&label&color=7289da)](https://join.elm.land) [![Twitter](https://badgen.net/badge/icon/twitter?icon=twitter&label&color=00acee)](https://twitter.com/elmland_) [![GitHub](https://badgen.net/badge/icon/github?icon=github&label&color=4078c0)](https://www.github.com/elm-land/elm-land) 
 
 [![Elm Land: Reliable web apps for everyone](https://github.com/elm-land/elm-land/raw/main/elm-land-banner.jpg)](https://elm.land)
 
+### Alpha release 🌱
 
-## Welcome to our repo!
+Although Elm Land is still a work-in-progress, please feel free to tinker around until the big `v1.0.0` release!
 
-The code for this GitHub project is broken down into smaller projects:
+If you're excited to try things out– come join the [Elm Land Discord](https://join.elm.land) to get help or share your experience! 
 
-- __[elm-land](./projects/cli/)__ - The CLI tool, available at [npmjs.org/elm-land](https://npmjs.org/elm-land)
-- __[@elm-land/www](./docs/)__ - The official website, available at [elm.land](https://elm.land)
+## Using the CLI
 
-### Plugins
+The `elm-land` CLI comes with everything you need to create your next web application:
 
-The Elm Land CLI will come with optional plugins for making web apps, designed to fit really well together!
+```
+$ elm-land
 
-- __[@elm-land/graphql](./projects/graphql/)__ - The plugin that converts GraphQL files into Elm code
-- __[@elm-land/ui](./projects/ui/)__ - The plugin that generates CSS and Elm code for your design system
+🌈  Welcome to Elm Land! (v0.18.1)
+    ⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺⎺
+    Here are the available commands:
 
+    ✨ elm-land init <folder-name> ...... create a new project
+    🚀 elm-land server ................ run a local dev server
+    📦 elm-land build .......... build your app for production
+    📄 elm-land add page <url> ................ add a new page
+    🍱 elm-land add layout <name> ........... add a new layout
+    🔧 elm-land customize <name> .. customize a default module
 
-### Tooling
+    Want to learn more? Visit https://elm.land/guide
 
-This repo also includes a few tooling projects, separated out for anyone else making tooling for Elm:
+```
 
-- __[@elm-land/elm-error-json](./projects/tooling/elm-error-json/)__ - Render the Elm compiler's JSON error output as full-color HTML or colored ASCII terminal output
+## The source code
 
-- __[@elm-land/codegen](./projects/tooling/codegen/)__ - a lightweight codegen library used internally by the Elm Land CLI
+If you would like to see how it works, all the code is available and [open-source on GitHub](https://github.com/elm-land/elm-land). 
+
+The CLI, docs website, and all the other Elm Land projects can all be found in that single GitHub repo.
+
+### Running the tests
+
+The tests in this project are designed to verify that the [official guide](https://elm.land/guide) and [all of the examples](https://github.com/elm-land/elm-land/tree/main/examples) are accurate for users.
+
+For that reason, we are using [bats](https://github.com/bats-core/bats-core) to make sure our CLI behaves as expected!
+
+```bash
+# Make sure you are in the `./cli` folder!
+npm install
+npm link
+npm run setup
+npm run test
+```
